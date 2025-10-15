@@ -1,0 +1,95 @@
+Michał Broda
+
+Informacje o SerwerzeDHCP:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:e7:4c:e8 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 85953sec preferred_lft 85953sec
+    inet6 fd00::a00:27ff:fee7:4ce8/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86391sec preferred_lft 14391sec
+    inet6 fe80::a00:27ff:fee7:4ce8/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:d3:6f:07 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.10.1/24 brd 192.168.10.255 scope global enp0s8
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:fed3:6f07/64 scope link 
+       valid_lft forever preferred_lft forever
+
+Informacje o KliencieDHCP:
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:e7:4c:e8 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 86164sec preferred_lft 86164sec
+    inet6 fd00::a00:27ff:fee7:4ce8/64 scope global dynamic mngtmpaddr noprefixroute
+       valid_lft 86166sec preferred_lft 14166sec
+    inet6 fe80::a00:27ff:fee7:4ce8/64 scope link
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:d3:6f:07 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.10.1/24 brd 192.168.10.255 scope global enp0s8
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:fed3:6f07/64 scope link
+       valid_lft forever preferred_lft forever
+
+
+Dowód, że serwer DHCP w SerwerDHCP działa:
+
+â—Ź ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: active (running) since Wed 2025-10-15 12:26:09 UTC; 8min ago
+TriggeredBy: â—Ź ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 1038 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 1039 (sshd)
+      Tasks: 1 (limit: 4605)
+     Memory: 4.0M (peak: 5.0M)
+        CPU: 126ms
+     CGroup: /system.slice/ssh.service
+             â””â”€1039 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+paĹş 15 12:26:09 u174748 systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+paĹş 15 12:26:09 u174748 sshd[1039]: Server listening on 0.0.0.0 port 22.
+paĹş 15 12:26:09 u174748 sshd[1039]: Server listening on :: port 22.
+paĹş 15 12:26:09 u174748 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+paĹş 15 12:26:15 u174748 sshd[1041]: Accepted password for u174748 from 10.0.2.2 port 56227 ssh2
+paĹş 15 12:26:15 u174748 sshd[1041]: pam_unix(sshd:session): session opened for user u174748(uid=1000) by u174748(uid=0)
+paĹş 15 12:31:36 u174748 sshd[1110]: Accepted password for u174748 from 10.0.2.2 port 56257 ssh2
+paĹş 15 12:31:36 u174748 sshd[1110]: pam_unix(sshd:session): session opened for user u174748(uid=1000) by u174748(uid=0)
+
+Konfiguracja DHCP:
+
+option domain-name "a3.17.local";
+option domain-name-servers 192.168.10.1;
+
+default-lease-time 600;
+max-lease-time 7200;
+
+subnet 192.168.10.0 netmask 255.255.255.0 {
+	range 192.168.10.100 192.168.10.200;
+	option routers 192.168.10.1;
+	option broadcast-address 192.168.10.255;
+}
+
+authorative;
+
+Logi dhcp potwierdzające przydział i zwolnienie adresu ipv4 przez KlientDHCP
+
+2025-10-15T12:27:35.682479+00:00 u174748 dhcpd[856]: DHCPDISCOVER from 08:00:27:22:36:e9 (u174748) via enp0s8
+2025-10-15T12:27:35.682812+00:00 u174748 dhcpd[856]: DHCPOFFER on 192.168.10.100 to 08:00:27:22:36:e9 (u174748) via enp0s8
+2025-10-15T12:27:35.683403+00:00 u174748 dhcpd[856]: DHCPREQUEST for 192.168.10.100 (192.168.10.1) from 08:00:27:22:36:e9 (u174748) via enp0s8
+2025-10-15T12:27:35.686284+00:00 u174748 dhcpd[856]: DHCPACK on 192.168.10.100 to 08:00:27:22:36:e9 (u174748) via enp0s8
