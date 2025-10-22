@@ -1,0 +1,25 @@
+1. Michał Broda
+
+2. <VirtualHost *:443>
+    ServerName xyz.local
+    DocumentRoot /var/www/xyz.local
+
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/xyz.local.crt
+    SSLCertificateKeyFile /etc/ssl/private/xyz.local.key
+
+    <Directory /var/www/xyz.local>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/xyz.local-ssl-error.log
+    CustomLog ${APACHE_LOG_DIR}/xyz.local-ssl-access.log combined
+</VirtualHost>
+
+3. 
+192.168.10.100 - - [22/Oct/2025:12:01:53 +0000] "GET / HTTP/1.1" 200 1958 "-" "curl/8.5.0"
+
+
+192.168.10.100 - - [22/Oct/2025:12:01:57 +0000] "GET / HTTP/1.1" 200 1956 "-" "curl/8.5.0"
