@@ -1,0 +1,22 @@
+1. Michał Broda
+
+2. Server:		192.168.10.1
+Address:	192.168.10.1#53
+
+Non-authoritative answer:
+Name:	www.onet.pl
+Address: 13.227.146.19
+Name:	www.onet.pl
+Address: 13.227.146.90
+Name:	www.onet.pl
+Address: 13.227.146.122
+Name:	www.onet.pl
+Address: 13.227.146.123
+
+3. Server:		192.168.10.1
+Address:	192.168.10.1#53
+
+Name:	xyz.a174748.local
+Address: 192.168.10.1
+
+4. <h1>Witamy na stronie ABC.LOCAL</h1>
