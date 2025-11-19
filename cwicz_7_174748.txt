@@ -1,0 +1,96 @@
+1. Michał Broda
+2.
+C:\Users\LAB3>nslookup server.lab.local
+Server:  server.lab.local
+Address:  192.168.3.1
+
+Name:    server.lab.local
+Address:  192.168.3.1
+-----------------
+C:\Users\LAB3>nslookup klient1.lab.local
+Server:  server.lab.local
+Address:  192.168.3.1
+
+Name:    klient1.lab.local
+Address:  192.168.3.2
+----------------
+C:\Users\LAB3>nslookup strona1.lab.local
+Server:  server.lab.local
+Address:  192.168.3.1
+
+Name:    strona1.lab.local
+Address:  192.168.3.1
+-------------------
+C:\Users\LAB3>nslookup strona2.lab.local
+Server:  server.lab.local
+Address:  192.168.3.1
+
+Name:    strona2.lab.local
+Address:  192.168.3.1
+----------------------
+C:\Users\LAB3>nslookup 192.168.0.1
+Server:  server.lab.local
+Address:  192.168.3.1
+---------------------
+3.
+C:\Users\LAB3>ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : DESKTOP-UR20JET
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : lab.local
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : lab.local
+   Description . . . . . . . . . . . : Intel(R) PRO/1000 MT Desktop Adapter
+   Physical Address. . . . . . . . . : 08-00-27-5E-D4-B2
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::3488:4178:ab4b:aa4f%5(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.3.2(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : środa, 19 listopada 2025 14:55:35
+   Lease Expires . . . . . . . . . . : czwartek, 27 listopada 2025 14:55:33
+   Default Gateway . . . . . . . . . : 192.168.3.1
+   DHCP Server . . . . . . . . . . . : 192.168.3.1
+   DHCPv6 IAID . . . . . . . . . . . : 50855975
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-A6-3D-30-08-00-27-5E-D4-B2
+   DNS Servers . . . . . . . . . . . : 192.168.3.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Tunnel adapter Teredo Tunneling Pseudo-Interface:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2001:0:2851:782c:c46:2fc6:3f57:fcfd(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::c46:2fc6:3f57:fcfd%6(Preferred)
+   Default Gateway . . . . . . . . . : ::
+   DHCPv6 IAID . . . . . . . . . . . : 134217728
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-A6-3D-30-08-00-27-5E-D4-B2
+   NetBIOS over Tcpip. . . . . . . . : Disabled
+
+Tunnel adapter isatap.lab.local:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : lab.local
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+-----------------
+4.
+C:\Users\LAB3>curl http://strona1.lab.local
+'curl' is not recognized as an internal or external command,
+operable program or batch file.
+---------------------
+C:\Users\LAB3>curl http://strona2.lab.local
+'curl' is not recognized as an internal or external command,
+operable program or batch file.
