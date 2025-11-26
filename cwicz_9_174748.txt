@@ -1,0 +1,164 @@
+1. Michał Broda
+2. C:\Users\LAB3>ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : DESKTOP-UR20JET
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : lab.local
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : lab.local
+   Description . . . . . . . . . . . : Intel(R) PRO/1000 MT Desktop Adapter
+   Physical Address. . . . . . . . . : 08-00-27-5E-D4-B2
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::3488:4178:ab4b:aa4f%5(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.3.2(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : środa, 26 listopada 2025 13:17:44
+   Lease Expires . . . . . . . . . . : czwartek, 4 grudnia 2025 13:17:45
+   Default Gateway . . . . . . . . . : 192.168.3.1
+   DHCP Server . . . . . . . . . . . : 192.168.3.1
+   DHCPv6 IAID . . . . . . . . . . . : 50855975
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-A6-3D-30-08-00-27-5E-D4-B2
+   DNS Servers . . . . . . . . . . . : 192.168.3.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Tunnel adapter Teredo Tunneling Pseudo-Interface:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2001:0:2851:782c:2046:7870:2a47:f765(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::2046:7870:2a47:f765%6(Preferred)
+   Default Gateway . . . . . . . . . : ::
+   DHCPv6 IAID . . . . . . . . . . . : 134217728
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-A6-3D-30-08-00-27-5E-D4-B2
+   NetBIOS over Tcpip. . . . . . . . : Disabled
+
+Tunnel adapter isatap.lab.local:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : lab.local
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #3
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+3. C:\Users\LAB3>curl http://strona1.lab.local
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Moja strona 1</title>
+</head>
+<body>
+ <h1>To ja, IIS!!!</h1>
+ <p>Witaj w laboratorium IIS na Windows Server!</p>
+</body>
+</html>
+C:\Users\LAB3>
+
+
+C:\Users\LAB3>curl http://strona2.lab.local
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Moja strona 2</title>
+</head>
+<body>
+ <h1>To ja, IIS!!!</h1>
+ <p>Witaj w laboratorium IIS na Windows Server!</p>
+</body>
+</html>
+
+
+C:\Users\LAB3>curl http://wmii.uwm.edu.pl
+<!DOCTYPE html>
+  <!--[if IEMobile 7]><html class="no-js ie iem7" lang="pl" dir="ltr"><![endif]-->
+  <!--[if lte IE 6]><html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="pl" dir="ltr"><![endif]-->
+  <!--[if (IE 7)&(!IEMobile)]><html class="no-js ie lt-ie9 lt-ie8" lang="pl" dir="ltr"><![endif]-->
+  <!--[if IE 8]><html class="no-js ie lt-ie9" lang="pl" dir="ltr"><![endif]-->
+  <!--[if (gte IE 9)|(gt IEMobile 7)]><html class="no-js ie" lang="pl" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><![endif]-->
+  <!--[if !IE]><!--><html class="no-js" lang="pl" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+<link rel="alternate" type="application/rss+xml" title="Wydział Matematyki i Informatyki RSS" href="http://wmii.uwm.edu.pl/rss.xml" />
+<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+<meta http-equiv="cleartype" content="on" />
+<meta name="keywords" content="studia, studia dzienne, studia podyplomowe, uniwersytet, kortowo, olsztyn" />
+<meta name="rating" content="general" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="http://wmii.uwm.edu.pl/" />
+<link rel="shortlink" href="http://wmii.uwm.edu.pl/" />
+  <title>Wydział Matematyki i Informatyki</title>
+  <link type="text/css" rel="stylesheet" href="http://wmii.uwm.edu.pl/f/css/css_PKhmGafLLf8d_I-OLefFZ3xgKT7ikVxY0uqD3dZfGKI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://wmii.uwm.edu.pl/f/css/css_g_QnJs8thl7ESF59pZaXzeT6R7oa-cGL3j2Cy8nPh2M.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://wmii.uwm.edu.pl/f/css/css_wAKABg_-dhCKYMIhU9UGPIr4gz4c-esHwHIqZPu8ICM.css" media="all" />
+  <script src="http://wmii.uwm.edu.pl/f/js/js_eOvWg3SeGOjfaADpLoOZFNDYVj6zh3d4pAMMHesn5d8.js"></script>
+<script src="http://wmii.uwm.edu.pl/f/js/js_8STzBXFm4WznUF432iM3mAouPU2Hhs_qHLSYtLzrScs.js"></script>
+<script src="http://wmii.uwm.edu.pl/f/js/js_NpX2cwCeepkWZZ194B6-ViyVBHleaYLOx5R9EWBOMRU.js"></script>
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="http://wmii.uwm.edu.pl/f/js/js_QhiIWiZxlYtvWG0HP9kETnDAuP_4jRJbaSkl41tVCbU.js"></script>
+<![endif]-->
+<script src="http://wmii.uwm.edu.pl/f/js/js_F2NtwmNxpqdO3bpyHzuSZRJBDtmJIImMXoa1UTSQs6A.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-85972185-1", {"cookieDomain":"auto"});ga("send", "pageview");</script>
+<script src="http://wmii.uwm.edu.pl/f/js/js_OL993krLAO3uGxFfCrmqeMRwGveiMw1b5XmL2qHLYPI.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","fancybox":{"selectors":["a:has(img)"]},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":"","extInclude":"(wmii\\.uwm\\.edu\\.pl\\\/kwumi)|(wmii\\.uwm\\.edu\\.pl\\\/konkursko)|(wmii\\.uwm\\.edu\\.pl\\\/~wzm)|(wmii\\.uwm\\.edu\\.pl\\\/congressiomath)|(wmii\\.uwm\\.edu\\.pl\\\/~zawodymat)|(wmii\\.uwm\\.edu\\.pl\\\/~zawodyinf)","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});</script>
+  <script>!(function () {
+          let e = document.createElement("script"),
+            t = document.head || document.getElementsByTagName("head")[0];
+          (e.src =
+            "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+            // Replace 1.x.x with the version that you want
+            (e.async = !0),
+            (e.onload = () => {
+              window.WebChat.default(
+                {
+                  initPayload:'/greet',
+                  customData: { language: "en" },
+                  socketUrl: "http://20.91.188.53:5005/",
+                  title: 'WMiI chatbot',
+                    inputTextFieldHint: 'Napisz wiadomość...',
+                  params: {
+                      storage: "session"
+
+                  }
+                  // add other props here
+                },
+                null
+              );
+            }),
+            t.insertBefore(e, t.firstChild);
+        })();
+        </script>
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LTNX0XR8PG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LTNX0XR8PG');
+</script>
+</head>
+<body class="html front not-logged-in page-node i18n-pl">
+    <div id="fb-root"></div><script>(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.8";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>    <div id="page-top" class="page-wrapper">
+        <div class="skip-main-content">
+            <a href="#main-content" class="element-invisible element-focusable">Przejdź do treści</a>
+            <a href="#block-menu-block-1" class="element-invisible element-focusable">Przejdź do menu głównego</a>
+        </div>
+                <div class="page"> <header id="page-header" class="page-header" role="banner"><div class="menu-top-wrapper"><div class="mobile-menu-top"></div><div id="top-bar" class="top-bar"><div class="top-bar-region-wrapper clearfix"><div class="block block-left"><ul class="navigation-list clearfix"><li> <a href="https://www.facebook.com/UWM.Olsztyn" title="Zajrzyj na nasz fanpage" class="btn-icon"> <span class="title">Facebook</span> <span class="icon"><span class="icon-fb"></span></span> </a></li><li> <a href="https://moskit.uwm.edu.pl/wwwmail" title="Poczta dla pracowników Uniwersytetu" class="btn-border btn-icon"> <span class="title">Poczta UWM</span> <span class="icon"><span class="icon-pocz"></span></span> </a></li><li> <a href="https://matman.uwm.edu.pl/mail/" title="Poczta wydziałowa" class="btn-border btn-icon"> <span class="title">Poczta WMiI</span> <span class="icon"><span class="icon-pocz"></span></span> </a></li><li> <a href="http://www.uwm.edu.pl/uniwersytet/wydzialy" title="Wykaz wydziałów Uniwersytetu Warmińsko-Mazurskiego w Olsztynie" class="btn-border btn-icon"> <span class="title">Wydziały</span> <span class="icon"><span class="icon-wydz"></span></span> </a></li></ul></div><div class="block block-center"><ul class="navigation-list"><li> <a href="http://www.uwm.edu.pl/szukaj" title="Wyszukiwarka"> <span class="title">Szukaj</span> </a></li><li> <a href="http://bip.uwm.edu.pl" title="Biuletyn Informacji Publicznej Uniwersytetu Warmińsko-Mazurskiego w Olsztynie"> <span class="title">BIP</span> </a></li><li><a xml:lang="en" lang="en" href="/en" title="Switch to english version" class="switch-lang switch-lang-en"><span class="title">English</span></a></li></ul></div><div class="block block-right"><ul class="navigation-list clearfix"><li> <a href="http://mapa.uwm.edu.pl/" title="Przewodnik po Uniwersytecie Warmińsko-Mazurskim dla osób niepełnosprawnych" class="btn-border btn-icon"> <span class="title">Przewodnik</span> <span class="icon"><span class="icon-przew"></span></span> </a></li><li> <a href="/kontakt" title="Dane teleadresowe Wydziału" class="btn-border btn-icon"> <span class="title">Kontakt</span> <span class="icon"><span class="icon-kon"></span></span> </a></li><li><a href="/user" title="Zaloguj się do portalu" class="btn-border" style="padding-right: 0"><span class="title">Zaloguj</span></a></li></ul></div></div></div><div id="top-shorts" class="top-shorts"><div class="top-shorts-region-wrapper"><ul class="navigation-list clearfix"><li> <a href="http://www.uwm.edu.pl/kalendarium" title="Kalendarium wydarzeń" class="btn-icon" > <span class="icon"><span class="icon-wyd"></span></span> <span class="title">Wydarzenia</span> </a></li><li> <a href="http://www.uwm.edu.pl/komunikaty" title="Lista komunikatów" class="btn-border btn-icon"> <span class="icon"><span class="icon-komun"></span></span> <span class="title">Komunikaty</span> </a></li><li> <a href="http://www.uwm.edu.pl/egazeta" title="eGazeta Uniwersytecka" class="btn-border btn-icon"> <span class="icon"><span class="icon-wiad"></span></span> <span class="title">Wiadomości</span> </a></li><li class="right"> <a href="http://konferencje.uwm.edu.pl/" title="Kalendarz konferencji" class="btn-border btn-icon"> <span class="icon"><span class="icon-konf"></span></span> <span class="title">Konferencje</span> </a></li><li class="right"> <a href="http://www.uwm.edu.pl/ogloszenia" title="Lista ogłoszeń" class="btn-border btn-icon"> <span class="icon"><span class="icon-oglo"></span></span> <span class="title">Ogłoszenia</span> </a></li><li class="right"> <a href="http://www.uwm.edu.pl/egazeta/zapowiedzi" title="Lista zapowiedzi" class="btn-border btn-icon"> <span class="icon"><span class="icon-zap"></span></span> <span class="title">Zapowiedzi</span> </a></li></ul></div></div></div><div class="branding"><div id="university" class="site-name"> <a href="http://www.uwm.edu.pl" title="Przeniesienie do strony głównej Uniwersytetu Warmińsko-Mazurskiego w Olsztynie" class="clearfix"> <span class="part t1"><span class="u">Uniwersytet</span> <span class="w">Warmińsko</span></span><span class="part d"> - </span> <span class="university-logo godlo"><img alt="" src="/sites/all/themes/faculty/images/uwm_godlo_2018.png"></span> <span class="part t2"><span class="m">Mazurski</span> <span class="o">w Olsztynie</span></span> </a></div></div><div class="faculty-branding faculty-logo"><div class="logos"><div class="uwm-logo "> <a href="http://www.uwm.edu.pl" title="Przeniesienie do strony głównej Uniwersytetu Warmińsko-Mazurskiego w Olsztynie"> <img src="/sites/all/themes/faculty/images/uwm_logo_2018_s_pl.png" alt="" /> </a></div><div id="site-logo" class="site-logo"> <a href="/" title="Przeniesienie do strony głównej wydziału"> <img src="http://wmii.uwm.edu.pl/f/logo.png" alt="" /> </a></div></div><h1 id="site-name" class="site-name"> <a href="/" title="Przeniesienie do strony głównej wydziału"><span class="site-name-label"><span>Wydział Matematyki i Informatyki</span></span></a></h1></div></header><div id="main" class="page-main has-sidebar-first clearfix" role="main"><div id="sidebar-first" class="sidebar sidebar-first" role=”complementary”><div class="region-wrapper"><div class="region-slide"><div class="l-region l-region--sidebar-first"> <nav id="block-menu-block-1" role="navigation" class="block block--menu-block block--menu-block-1"><div class="block__title-wrapper"><div class="mobile-menu-wrapper"> <button class="mobile-menu" role="button"><span class="button-text">Show Menu główne</span></button></div><h2 class="block__title">Menu główne</h2></div><div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-1"><ul class="menu"><li class="first leaf active menu-mlid-253"><a href="/" title="" class="active"><span>Strona główna</span></a></li><li class="collapsed menu-mlid-480"><a href="/studenci"><span>Studenci</span></a></li><li class="leaf menu-mlid-1088"><a href="/logowanie-ms-teams" title=""><span>Logowanie MS Teams</span></a></li><li class="leaf menu-mlid-788"><a href="/kadra"><span>Kadra - kontakt</span></a></li><li class="collapsed menu-mlid-479"><a href="/wydzial"><span>Wydział</span></a></li><li class="collapsed menu-mlid-827"><a href="/dla-kandydatow" title=""><span>Dla kandydatów</span></a></li><li class="collapsed menu-mlid-570"><a href="/ogloszenia" title="Ogłoszenia i komunikaty"><span>Ogłoszenia</span></a></li><li class="collapsed menu-mlid-738"><a href="/konferencje"><span>Konferencje</span></a></li><li class="leaf menu-mlid-1113"><a href="/dla-absolwentow" title=""><span>Dla Absolwentów</span></a></li><li class="collapsed menu-mlid-690"><a href="/wydzial/dla-uczniow-i-nauczycieli" title=""><span>Dla Uczniów i Nauczycieli</span></a></li><li class="collapsed menu-mlid-481"><a href="/polskie-towarzystwo-matematyczne" title=""><span>Polskie Towarzystwo Matematyczne</span></a></li><li class="last collapsed menu-mlid-1086"><a href="/polskie-towarzystwo-informatyczne"><span>Polskie Towarzystwo Informatyczne</span></a></li></ul></div></nav><div id="block-block-5" class="block block--block block-container block--block-5"><div class="block__content"><div class="facebook-w"><div class="fb-page" data-href="https://www.facebook.com/uwmwmii" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/uwmwmii" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/uwmwmii">Wydział Matematyki i Informatyki UWM w Olsztynie</a></blockquote></div></div></div></div><div id="block-block-2" class="block block--block block--block-2"><div class="block__content"><div class="kontakt-pl"><h2>Kontakt</h2><p>Uniwersytet Warmińsko-Mazurski<br /><strong>Wydział Matematyki i Informatyki<br /></strong>ul. Słoneczna 54<br />10-710 Olsztyn<br />e-mail: <a href="mailto:wmii@matman.uwm.edu.pl">wmii@matman.uwm.edu.pl</a></p><p>Administratorzy www:<br /><strong>od strony technicznej</strong> <br />mgr inż. Cezary Morawski<strong><br /></strong></p></div></div></div><div id="block-block-10" class="block block--block title-hide block--block-10"><h2 class="block__title">Filmy</h2><div class="block__content"><div class="rekrutacja2016"><iframe style="margin: -0.6666em; display: block;" width="242px" height="220px" src="https://www.youtube.com/embed/YLfEA5V9KiY" frameborder="0" allowfullscreen=""></iframe></div></div></div></div></div></div></div> <section id="content-main" class="content-main"> <a id="main-content"></a><div id="block-views-frontpage-shortcuts-block" class="block block--views block--views-frontpage-shortcuts-block"><h2 class="block__title">Skróty</h2><div class="block__content"><div class="view view-frontpage-shortcuts view-id-frontpage_shortcuts view-display-id-block view-buttons view-shortcuts view-dom-id-1ec01671bc2a351fcea007f2b5a03dd3"><div class="view-content"><div class="item-list"><ul class="clearfix"><li class="views-row views-row-1"><h3 class="views-field views-field-title"> <a href="http://wmii.uwm.edu.pl/wydzial/dziekanat"><span>Dziekanat</span></a></h3></li><li class="views-row views-row-2"><h3 class="views-field views-field-title"> <a href="http://wmii.uwm.edu.pl/studenci/plany-zajec"><span>Plany zajęć</span></a></h3></li><li class="views-row views-row-3"><h3 class="views-field views-field-title"> <a href="http://wmii.uwm.edu.pl/kontakt"><span>Kontakt</span></a></h3></li></ul></div></div></div></div></div><div id="block-views-frontpage-kierunki-block" class="block block--views grid-left block--views-frontpage-kierunki-block"><h2 class="block__title">Kierunki</h2><div class="block__content"><div class="view view-frontpage-kierunki view-id-frontpage_kierunki view-display-id-block view-buttons view-shortcuts view-fields-studies view-dom-id-5b01dc76f75189cb2c6fa2e357bc562e"><div class="view-content"><div class="item-list"><ul class="clearfix"><li class="views-row views-row-1"><h3 class="views-field views-field-title has-field-image"> <a href="http://wmii.uwm.edu.pl/dla-kandydatow"><span class="views-field-field-image"><img typeof="foaf:Image" src="http://wmii.uwm.edu.pl/f/styles/front484/public/images/frontpage/podyplo.png?itok=yRHcm7et" width="484" height="304" alt="" /></span><span>Dla kandydatów</span></a></h3></li><li class="views-row views-row-2"><h3 class="views-field views-field-title has-field-image"> <a href="http://wmii.uwm.edu.pl/dla-kandydatow/informatyka"><span class="views-field-field-image"><img typeof="foaf:Image" src="http://wmii.uwm.edu.pl/f/styles/front484/public/images/frontpage/fot1.jpg?itok=BMESaPbx" width="484" height="304" alt="" /></span><span>Informatyka</span></a></h3></li><li class="views-row views-row-3"><h3 class="views-field views-field-title has-field-image"> <a href="http://wmii.uwm.edu.pl/dla-kandydatow/matematyka"><span class="views-field-field-image"><img typeof="foaf:Image" src="http://wmii.uwm.edu.pl/f/styles/front484/public/images/frontpage/fot2.jpg?itok=R3rw5xSl" width="484" height="304" alt="" /></span><span>Matematyka</span></a></h3></li></ul></div></div></div></div></div><div id="block-views-frontpage-shortcuts-2-block" class="block block--views block--views-frontpage-shortcuts-2-block"><h2 class="block__title">Skróty</h2><div class="block__content"><div class="view view-frontpage-shortcuts-2 view-id-frontpage_shortcuts_2 view-display-id-block view-buttons view-shortcuts view-dom-id-a6dd9d598ababa969a7650fdad2d9a08"><div class="view-content"><div class="item-list"><ul class="clearfix"><li class="views-row views-row-1"><h3 class="views-field views-field-title"> <a href="https://psi.wmii.pl"><span>Studia podyplomowe</span></a></h3></li><li class="views-row views-row-2"><h3 class="views-field views-field-title"> <a href="http://wmii.uwm.edu.pl/studenci/podania"><span>Wzory dokumentów</span></a></h3></li><li class="views-row views-row-3"><h3 class="views-field views-field-title"> <a href="http://wmii.uwm.edu.pl/studenci/sprawy-dyplomantow"><span>Sprawy dyplomantów</span></a></h3></li></ul></div></div></div></div></div><div id="block-views-frontpage-node-list-block" class="block block--views title-show block--views-frontpage-node-list-block"><h2 class="block__title"><a href="/ogloszenia" class="block-title-link">Aktualności</a></h2><div class="block__content"><div class="view view-frontpage-node-list view-id-frontpage_node_list view-display-id-block view-node-list view-news view-dom-id-c3cd1f9a0addd9c46e885b888d267466"><div class="view-content"><div class="item-list"><ul><li class="views-row views-row-1"> <a href="/aktualnosci/zaprogramuj-przyszlosc-polski-wez-udzial-hacknation-za-darmo" title="Zaprogramuj przyszłość Polski – weź udział w HackNation za darmo!" class="view-node-link has-field-image"><div class="views-field views-field-field-image"><img typeof="foaf:Image" src="http://wmii.uwm.edu.pl/f/styles/list488/public/images/article/wmii_hacknation_2025.jpg?itok=E9FQA76s" width="488" height="325" alt="" /></div><h3 class="views-field views-field-title">Zaprogramuj przyszłość Polski – weź udział w HackNation za darmo!</h3><div class="views-field views-field-created">25/11/2025</div><div class="views-field views-field-body">W imieniu Ministerstwa Cyfryzacji zapraszamy studentów Wydziału Matematyki i Informatyki UWM na ogólnopolski hackathon wdrożeniowy dla administracji publicznej HackNation 2025. Wydarzenie odbędzie się w dniach 6–7 grudnia 2025 r. w Bydgoskim Centrum Targowo...</div></a></li><li class="views-row views-row-2"> <a href="/aktualnosci/twoja-praca-twoja-mysl-twoj-wplyw-konkurs-prac-dyplomowych-abb" title="Twoja praca. Twoja myśl. Twój wpływ – konkurs prac dyplomowych ABB" class="view-node-link has-field-image"><div class="views-field views-field-field-image"><img typeof="foaf:Image" src="http://wmii.uwm.edu.pl/f/styles/list488/public/images/article/glowne_-_konkurs_abb.jpg?itok=frPDY6Dy" width="488" height="325" alt="" /></div><h3 class="views-field views-field-title">Twoja praca. Twoja myśl. Twój wpływ – konkurs prac dyplomowych ABB</h3><div class="views-field views-field-created">25/11/2025</div><div class="views-field views-field-body">Korporacyjne Centrum Technologiczne ABB zaprasza studentów, absolwentów i doktorantów do udziału w 23. edycji Konkursu o Nagrodę ABB.Głównym celem Konkursu jest promowanie i wspieranie utalentowanych osób, pasjonujących się zaawansowanymi technologiami....</div></a></li><li class="views-row views-row-3"> <a href="/aktualnosci/aws-user-group-olsztyn-zapraszamy-na-kolejne-spotkanie-juz-25-listopada" title="AWS User Group Olsztyn – zapraszamy na kolejne spotkanie już 25 listopada" class="view-node-link has-field-image"><div class="views-field views-field-field-image"><img typeof="foaf:Image" src="http://wmii.uwm.edu.pl/f/styles/list488/public/images/article/aws_user_group_0.jpg?itok=GYzViMue" width="488" height="275" alt="" /></div><h3 class="views-field views-field-title">AWS User Group Olsztyn – zapraszamy na kolejne spotkanie już 25 listopada</h3><div class="views-field views-field-created">24/11/2025</div><div class="views-field views-field-body">Zapraszamy na kolejne spotkanie AWS User Group Olsztyn, czyli lokalnej społeczności omawiającej tematy związane z Amazon Web Services.The event in PolishSpotkanie jest darmowe, prosimy o zapisywanie poprzez platformę meetup.org.</div></a></li><li class="views-row views-row-4"> <a href="/aktualnosci/interesuje-cie-tematyka-bezpieczenstwa-narodowego-zglos-swoja-prace-dyplomowa-do" title="Interesuje Cię tematyka bezpieczeństwa narodowego? Zgłoś swoją pracę dyplomową do konkursu ALIOTH" class="view-node-link has-field-image"><div class="views-field views-field-field-image"><img typeof="foaf:Image" src="http://wmii.uwm.edu.pl/f/styles/list488/public/images/article/konkurs-af-foto.jpg?itok=PFWq4juC" width="488" height="275" alt="" /></div><h3 class="views-field views-field-title">Interesuje Cię tematyka bezpieczeństwa narodowego? Zgłoś swoją pracę dyplomową do konkursu ALIOTH</h3><div class="views-field views-field-created">20/11/2025</div><div class="views-field views-field-body">Alioth Foundation ogłasza IV Ogólnopolski Konkurs na najlepsze prace dyplomowe z zakresu bezpieczeństwa narodowego, obronności i przemysłu obronnego.Do Konkursu dopuszczone będą prace licencjackie / inżynierskie, magisterskie oraz doktorskie obronione w roku...</div></a></li><li class="views-row views-row-5"> <a href="/aktualnosci-ogloszenia-dziekanatu-dla-studentow-studiow-stacjonarnych-ogloszenia-dziekanatu-dla-31" title="Kursy Moodle z przedmiotów BHP, Ergonomia, Etykieta, Informacja Patentowa oraz OWI" class="view-node-link"><div class="views-field views-field-field-image"></div><h3 class="views-field views-field-title">Kursy Moodle z przedmiotów BHP, Ergonomia, Etykieta, Informacja Patentowa oraz OWI</h3><div class="views-field views-field-created">06/11/2025</div><div class="views-field views-field-body">Szanowni Studenci,W dniach 06.11.2025 r. - 20.12.2025 r. na platformie Moodle(https://moodle.uwm.edu.pl/) będą uruchomione kursy z przedmiotów: BHP, Ergonomia, Etykieta, Informacja patentowa oraz Ochrona własności intelektualnej.Studenci realizujący dane...</div></a></li><li class="views-row views-row-6"> <a href="/aktualnosci/olsztyn-open-2025-zawody-speedcubingowe-uloz-swoje-zwyciestwo" title="Olsztyn Open 2025 – zawody speedcubingowe. Ułóż swoje zwycięstwo!" class="view-node-link has-field-image"><div class="views-field views-field-field-image"><img typeof="foaf:Image" src="http://wmii.uwm.edu.pl/f/styles/list488/public/images/article/olsztyn_open_2025_-_grafika_na_facebooka_2.png?itok=Rk_y1Rmi" width="466" height="333" alt="" /></div><h3 class="views-field views-field-title">Olsztyn Open 2025 – zawody speedcubingowe. Ułóż swoje zwycięstwo!</h3><div class="views-field views-field-created">03/11/2025</div><div class="views-field views-field-body">Już 22 i 23 listopada 2025 r., Aula Moczarskiego na Wydziale Bioinżynierii Zwierząt (ul. Michała Oczapowskiego 5) zamieni się w arenę najszybszych rąk i najbystrzejszych umysłów.To właśnie tutaj odbędą się zawody, podczas których uczestnicy będą rywalizować o...</div></a></li><li class="views-row views-row-7"> <a href="/aktualnosci/cyberiada-20252026-trwa-rekrutacja" title="Cyberiada 2025/2026 – trwa rekrutacja!" class="view-node-link has-field-image"><div class="views-field views-field-field-image"><img typeof="foaf:Image" src="http://wmii.uwm.edu.pl/f/styles/list488/public/images/article/cyberiada_2026.jpg?itok=WueQSsnF" width="488" height="325" alt="" /></div><h3 class="views-field views-field-title">Cyberiada 2025/2026 – trwa rekrutacja!</h3><div class="views-field views-field-created">31/10/2025</div><div class="views-field views-field-body">Jesteś studentem/studentką i marzysz o stworzeniu swojej własnej gry? Teraz masz szansę! Stwórz zespół, przygotuj zgłoszenie i stań do walki z zespołami z całej Polski. Rozwijaj swoje umiejętności w gamedevie pod okiem ekspertów i ekspertek z branży na...</div></a></li></ul></div></div><div class="view-custom-actions"> <a href="/ogloszenia" title="Przejrzyj starsze ogłoszenia" class="btn-view-more">Pozostałe ogłoszenia</a><div></div></div></div> </section></div> <footer id="page-footer" class="page-footer clearfix"><div class="footer-uwm-branding"><div class="logos "> <img src="/sites/all/themes/faculty/images/godlo_pl.png?1" alt="Godło Rzeczypospolitej Polskiej" class="godlorp" /> <img src="/sites/all/themes/faculty/images/uwm_logo_2018.png" alt="" class="logouwm" /></div></div><div class="footer-region"><div class="l-region l-region--footer"><div id="block-block-6" class="block block--block block--block-6"><div class="block__content"><div class="partners"><a href="https://skillsforall.com/catalog?category=course" target="_blank"><img src="/f/partners/partner-cisco.png" alt="Cisco Networking Academy" /></a> <a href="https://www.visual-paradigm.com/features/" target="_blank"><img src="/f/partners/visual-paradigm.png?1" alt="Visual Paradigm" /></a><a href="http://most.amu.edu.pl/index.php/strona-glowna" target="_blank"><img src="/f/partners/most_logo.png?1" alt="MOST program mobilności studentów i doktorantów" /></a><a href="http://wmii.uwm.edu.pl/imaginex/" target="_blank"><img src="/f/partners/microsoft_imagine.png?1" alt="Student Developer Tools, Resources and Experiences | Imagine" /></a></div></div></div><div id="block-block-14" class="block block--block block--block-14"><div class="block__content"><div style="display: flex; justify-content: end;"><a href="http://wmii.uwm.edu.pl/deklaracja-dostepnosci">Deklaracja dostępności</a></div></div></div></div></div> <a href="#page-top" class="back-to-top" title="Powrót do góry">Powrót do góry</a></footer></div>        <script src="http://wmii.uwm.edu.pl/f/js/js_3fGERyQtb35H3vTZpK43FUEAjR7BVcZX59-GuXhddoA.js"></script>
+<script>var uwm_cookiestxt = 'Nasze strony wykorzystują pliki cookies. W przeglądarce internetowej można zmienić ustawienia dotyczące plików cookies. Brak zmiany tych ustawień oznacza akceptację dla stosowanych tu plików cookies zgodnie z aktualnymi ustawieniami przeglądarki. <a href="http://www.uwm.edu.pl/polityka-cookies" class="learn-more" target="_blank">Dowiedz się więcej o celu używania plików cookies.</a>';var uwm_cookies_close = 'Zamknij';</script>
+    </div>
+</body>
+</html>
